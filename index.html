@@ -15,6 +15,8 @@
       href="https://fonts.googleapis.com/css2?family=Poppins&family=Staatliches&display=swap"
       rel="stylesheet"
     />
+
+    <link rel="shortcut icon" href="#" type="image/x-icon">
   </head>
 
   <body>
@@ -24,7 +26,7 @@
         <p>Preencha o formulário abaixo para agendar a sua mentoria</p>
       </header>
 
-      <form>
+      <form id="my-form">
         <fieldset>
           <div class="fieldset-wrapper">
 
@@ -43,23 +45,27 @@
                 <input type="text" id="usersurname" required />
               </div>
             </div>
+
             <div class="input-wrapper">
               <label for="email"
-                >E-mail<span>(digite um email válido)</span></label
-              >
+                >E-mail
+                <span>(digite um email válido)</span>
+              </label>
               <input type="email" id="email" required />
             </div>
 
             <div class="input-wrapper">
               <label for="password"
-                >Senha<span>(mínimo de 8 caracteres)</span></label
-              >
+                >Senha
+                <span>(mínimo de 8 caracteres)<span>
+              </label>
               <input type="password" id="password" required minlength="8" />
             </div>
+
           </div>
         </fieldset>
 
-        <!-- <fieldset>
+        <fieldset>
           <div class="fieldset-wrapper">
 
             <legend>Informações do mentor</legend>
@@ -68,25 +74,101 @@
 
             <div class="input-wrapper">
               <label for="mentor-name"
-                >Nome do seu mentor<span>(apenas o primeiro nome)</span></label
-              >
+                >Nome do seu mentor
+                <span>(apenas o primeiro nome)</span>
+              </label>
               <input type="text" id="mentor-name" required />
             </div>
+
           </div>
         </fieldset>
 
         <fieldset>
+
           <div class="fieldset-wrapper">
 
             <legend>Seus horários disponíveis</legend>
           
             <div class="separator"></div>
+
+            <div class="mentoring">
+
+              <legend>Primeira mentoria</legend>
+
+              <div class="mentoring-wrapper">
+
+                <div class="input-wrapper">
+                  <label for="first-mentoring-date">
+                    Data
+                    <span>(DD/MM/AAAA)</span>
+                  </label>
+                  <input type="date" id="first-mentoring-date"
+                  class="mentoring-date">
+                </div>
+
+                <div class="row-2">
+                  
+                  <div class="input-wrapper">
+                    <label for="first-mentoring-begin">Das</label>
+                    <input type="time" id="first-mentoring-begin"
+                    class="mentoring-begin">
+                  </div>
+
+                  <div class="input-wrapper">
+                    <label for="first-mentoring-end">Até</label>
+                    <input type="time" id="first-mentoring-end"
+                    class="mentoring-end">
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+          
+            <div class="mentoring">
+
+              <legend>Segunda mentoria</legend>
+
+              <div class="mentoring-wrapper">
+
+                <div class="input-wrapper">
+                  <label for="first-mentoring-date">
+                    Data
+                    <span>(DD/MM/AAAA)</span>
+                  </label>
+                  <input type="date" id="second-mentoring-date"
+                  class="mentoring-date">
+                </div>
+
+                <div class="row-2">
+                  
+                  <div class="input-wrapper">
+                    <label for="second-mentoring-begin">Das</label>
+                    <input type="time" id="second-mentoring-begin"
+                    class="mentoring-begin">
+                  </div>
+
+                  <div class="input-wrapper">
+                    <label for="second-mentoring-end">Até</label>
+                    <input type="time" id="second-mentoring-end"
+                    class="mentoring-end">
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
             
           </div>
-        </fieldset> -->
+        </fieldset>
+
       </form>
 
-      <footer></footer>
+      <footer>
+        <button form="my-form" type="submit">Salvar</button>
+      </footer>
     </div>
   </body>
 </html>
